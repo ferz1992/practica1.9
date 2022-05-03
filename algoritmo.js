@@ -23,10 +23,22 @@ let contraseñaIngresada = "contraseña por defecto";
 -verifica el login-
 */
 
-function verificar(){
+function verificar() {
 
 
-usuarioIngresado = document.querySelector('usuario_ingresado').value;
-console.log(usuarioIngresado);
+    usuarioIngresado = document.querySelector('#usuario_ingresado').value;
+    contraseñaIngresada = document.querySelector('#contraseña_ingresada').value;
+
+    if ((usuarioIngresado == USUARIO_REGISTRADO) && (contraseñaIngresada == CONTRASEÑA_REGISTRADA)) {
+        document.querySelector('#mensajeResultado').innerHTML =
+            `<h1> usuario ${usuarioIngresado} bienvenido¡ </h1>`
+        console.log(usuarioIngresado);
+    }
+    else {
+
+        console.log(usuarioIngresado);
+
+
+    }
 
 }
